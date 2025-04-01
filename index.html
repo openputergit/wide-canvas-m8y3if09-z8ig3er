@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyArc DOOH Sponsorship | Rajkot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .clay-effect {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            box-shadow: 
+                35px 35px 68px 0px rgba(145, 192, 255, 0.5),
+                inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6),
+                inset 0px 11px 28px 0px rgb(255, 255, 255);
+        }
+        .hero-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gradient-to-br from-blue-50 to-purple-50">
+    <!-- Sticky Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">SkyArc</h1>
+            <a href="https://wa.me/1234567890" class="clay-effect px-6 py-2 text-blue-600 font-semibold hover:scale-105 transition-transform">
+                <i class="bi bi-whatsapp"></i> Contact Us
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 px-4 min-h-screen flex items-center">
+        <div class="container mx-auto">
+            <div class="clay-effect p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-4xl md:text-5xl font-bold text-blue-600">Transform Your Brand Presence in Rajkot</h2>
+                        <p class="text-gray-600 text-lg">Elevate your brand with our premium Digital Out-of-Home advertising solutions this festive season.</p>
+                        <button onclick="document.getElementById('packages').scrollIntoView({behavior: 'smooth'})" class="clay-effect px-8 py-4 text-blue-600 font-bold hover:scale-105 transition-transform">
+                            Explore Packages
+                        </button>
+                    </div>
+                    <div class="hero-animation">
+                        <img src="https://source.unsplash.com/random/800x600/?digital,advertising" alt="Digital Advertising" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">Festival Special Packages</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Summer Package -->
+                <div class="clay-effect p-6 space-y-4">
+                    <h3 class="text-2xl font-bold text-blue-500">Summer Special</h3>
+                    <p class="text-gray-600">Premium visibility during peak summer season</p>
+                    <ul class="space-y-2">
+                        <li><i class="bi bi-check-circle text-green-500"></i> 30 Days Coverage</li>
+                        <li><i class="bi bi-check-circle text-green-500"></i> Prime Locations</li>
+                        <li><i class="bi bi-check-circle text-green-500"></i> Analytics Report</li>
+                    </ul>
+                    <button onclick="openBookingForm('Summer Package')" class="w-full clay-effect py-3 text-blue-600 font-semibold hover:scale-105 transition-transform">
+                        Book Now
+                    </button>
+                </div>
+
+                <!-- Janmashtami Package -->
+                <div class="clay-effect p-6 space-y-4">
+                    <h3 class="text-2xl font-bold text-blue-500">Janmashtami Special</h3>
+                    <p class="text-gray-600">Festival-focused advertising campaign</p>
+                    <ul class="space-y-2">
+                        <li><i class="bi bi-check-circle text-green-500"></i> 15 Days Coverage</li>
+                        <li><i class="bi bi-check-circle text-green-500"></i> Temple Vicinity</li>
+                        <li><i class="bi bi-check-circle text-green-500"></i> Event Integration</li>
+                    </ul>
+                    <button onclick="openBookingForm('Janmashtami Package')" class="w-full clay-effect py-3 text-blue-600 font-semibold hover:scale-105 transition-transform">
+                        Book Now
+                    </button>
+                </div>
+
+                <!-- Independence Day Package -->
+                <div class="clay-effect p-6 space-y-4">
+                    <h3 class="text-2xl font-bold text-blue-500">Independence Day Special</h3>
+                    <p class="text-gray-600">Patriotic themed campaign package</p>
+                    <ul class="space-y-2">
+                        <li><i class="bi bi-check-circle text-green-500"></i> 7 Days Coverage</li>
+                        <li><i class="bi bi-check-circle text-green-500"></i> City-wide Display</li>
+                        <li><i class="bi bi-check-circle text-green-500"></i> Social Media Integration</li>
+                    </ul>
+                    <button onclick="openBookingForm('Independence Day Package')" class="w-full clay-effect py-3 text-blue-600 font-semibold hover:scale-105 transition-transform">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="clay-effect p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">Book Your Package</h3>
+            <form id="bookingForm" class="space-y-4">
+                <input type="hidden" id="packageType" name="packageType">
+                <div>
+                    <label class="block text-gray-700 mb-2">Name</label>
+                    <input type="text" required class="w-full p-2 border rounded" name="name">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" required class="w-full p-2 border rounded" name="email">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Phone</label>
+                    <input type="tel" required class="w-full p-2 border rounded" name="phone">
+                </div>
+                <div class="flex space-x-4">
+                    <button type="submit" class="flex-1 clay-effect py-3 text-blue-600 font-semibold hover:scale-105 transition-transform">
+                        Submit
+                    </button>
+                    <button type="button" onclick="closeBookingForm()" class="flex-1 clay-effect py-3 text-red-600 font-semibold hover:scale-105 transition-transform">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Generate a persistent userId
+        let userId = localStorage.getItem('userId') || 'user_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem('userId', userId);
+
+        // Scroll Animation
+        function handleScroll() {
+            const elements = document.querySelectorAll('.scroll-animate');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight * 0.75) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        // Booking Form Functions
+        function openBookingForm(packageName) {
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.getElementById('bookingModal').classList.add('flex');
+            document.getElementById('packageType').value = packageName;
+        }
+
+        function closeBookingForm() {
+            document.getElementById('bookingModal').classList.add('hidden');
+            document.getElementById('bookingModal').classList.remove('flex');
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                package: formData.get('packageType')
+            };
+
+            try {
+                const response = await fetch('https://r0c8kgwocscg8gsokogwwsw4.zetaverse.one/db', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer m3CHCKpQI4aqQSgWs4CQWSyBIEF2',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        userId: userId,
+                        appSlug: 'skyarc-dooh',
+                        action: 'create',
+                        table: 'leads',
+                        data: data
+                    })
+                });
+
+                const result = await response.json();
+                if (!result.error) {
+                    alert('Thank you for your interest! We will contact you soon.');
+                    closeBookingForm();
+                } else {
+                    alert('Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                alert('Something went wrong. Please try again.');
+            }
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
